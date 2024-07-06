@@ -1,5 +1,5 @@
 /* ----------Html----------- */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {
+html, body, button, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, section, summary, time, mark, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -10,6 +10,30 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 *,
 *::before,
 *::after{box-sizing:border-box;}
+
+/* ----------Generics-------- */
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.items-center{
+    display: flex;
+    align-items: center;
+}
+.gap-x-4{
+    gap: 16px;
+}
+
+.justify-center{
+    display: flex;
+    justify-content: center;
+}
+
+.text-standard{
+    font-size: 0.95rem;
+}
 
 
 /* ----------Colors---------- */
@@ -27,7 +51,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding-inline: 20px;
 }
 
-.main_menu_left{
+
+.main_menu_child{
     display: flex;
-    align-items: center;
+    align-items: center; 
+    row-gap: 100px;
 }
