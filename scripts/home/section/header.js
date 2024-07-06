@@ -31,13 +31,6 @@ function menuBar(params) {
 	focusButton.appendChild(focusIcon)
 	menuRightDiv.appendChild(focusButton)
 
-	// Creating focus button
-	const focusButton = document.createElement('button')
-	focusButton.classList.add('items-center')
-	const focusIcon = document.createElement('img')
-	focusIcon.src = svgMappings['focus']
-	focusButton.appendChild(focusIcon)
-	menuRightDiv.appendChild(focusButton)
 
 	// Creating wifi button
 	const wifiButton = document.createElement('button')
