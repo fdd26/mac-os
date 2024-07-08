@@ -1,4 +1,4 @@
-import menuBar from "./home/section/header.js";
+import menuBar from "./home/section/header/index.js";
 function main(params) {
     menuBar();
 }
