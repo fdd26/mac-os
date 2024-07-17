@@ -5,53 +5,32 @@ var svgMappings = {
 	"control-center": 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTMiIHZpZXdCb3g9IjAgMCAxNCAxMyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMuNjkyODcgMTIuNzEzOUMzLjE1NTQ0IDEyLjcxMzkgMi42Njg3OCAxMi41OTU0IDIuMjMyOTEgMTIuMzU4NEMxLjgwMTI3IDEyLjEyNTcgMS40NTYzOCAxMS44MDE5IDEuMTk4MjQgMTEuMzg3MkMwLjk0NDMzNiAxMC45NzI1IDAuODE3MzgzIDEwLjQ5MjIgMC44MTczODMgOS45NDYyOUMwLjgxNzM4MyA5LjQwMDM5IDAuOTQ0MzM2IDguOTIwMDggMS4xOTgyNCA4LjUwNTM3QzEuNDU2MzggOC4wOTA2NiAxLjgwMTI3IDcuNzY2OTMgMi4yMzI5MSA3LjUzNDE4QzIuNjY4NzggNy4yOTcyIDMuMTU1NDQgNy4xNzg3MSAzLjY5Mjg3IDcuMTc4NzFIMTAuMzAwOEMxMC44MzgyIDcuMTc4NzEgMTEuMzIyOCA3LjI5NzIgMTEuNzU0NCA3LjUzNDE4QzEyLjE5MDMgNy43NjY5MyAxMi41MzUyIDguMDkwNjYgMTIuNzg5MSA4LjUwNTM3QzEzLjA0NzIgOC45MjAwOCAxMy4xNzYzIDkuNDAwMzkgMTMuMTc2MyA5Ljk0NjI5QzEzLjE3NjMgMTAuNDkyMiAxMy4wNDcyIDEwLjk3MjUgMTIuNzg5MSAxMS4zODcyQzEyLjUzNTIgMTEuODAxOSAxMi4xOTAzIDEyLjEyNTcgMTEuNzU0NCAxMi4zNTg0QzExLjMyMjggMTIuNTk1NCAxMC44MzgyIDEyLjcxMzkgMTAuMzAwOCAxMi43MTM5SDMuNjkyODdaTTEwLjQ2NTggMTEuNDYzNEMxMC43NDA5IDExLjQ2MzQgMTAuOTkyNyAxMS4zOTM2IDExLjIyMTIgMTEuMjUzOUMxMS40NDk3IDExLjExODUgMTEuNjMxNyAxMC45MzQ0IDExLjc2NzEgMTAuNzAxN0MxMS45MDY3IDEwLjQ2ODkgMTEuOTc4NyAxMC4yMTA4IDExLjk4MjkgOS45MjcyNUMxMS45ODI5IDkuNjUyMTggMTEuOTE1MiA5LjQwMjUxIDExLjc3OTggOS4xNzgyMkMxMS42NDQ0IDguOTQ5NzEgMTEuNDYwMyA4Ljc2Nzc0IDExLjIyNzUgOC42MzIzMkMxMC45OTkgOC40OTY5MSAxMC43NDUxIDguNDI5MiAxMC40NjU4IDguNDI5MkMxMC4xODY1IDguNDI5MiA5LjkzMjYyIDguNDk2OTEgOS43MDQxIDguNjMyMzJDOS40NzU1OSA4Ljc2Nzc0IDkuMjkzNjIgOC45NDk3MSA5LjE1ODIgOS4xNzgyMkM5LjAyMjc5IDkuNDA2NzQgOC45NTUwOCA5LjY2MDY0IDguOTU1MDggOS45Mzk5NEM4Ljk1NTA4IDEwLjIxOTIgOS4wMjI3OSAxMC40NzMxIDkuMTU4MiAxMC43MDE3QzkuMjkzNjIgMTAuOTMwMiA5LjQ3NTU5IDExLjExMjEgOS43MDQxIDExLjI0NzZDOS45MzI2MiAxMS4zODcyIDEwLjE4NjUgMTEuNDU5MSAxMC40NjU4IDExLjQ2MzRaTTMuOTUzMTIgNi4yMDc1MkMzLjM2MDY4IDYuMjA3NTIgMi44Mjc0NyA2LjA4MDU3IDIuMzUzNTIgNS44MjY2NkMxLjg3OTU2IDUuNTcyNzUgMS41MDUwNSA1LjIxNzI5IDEuMjI5OTggNC43NjAyNUMwLjk1NDkxNSA0LjI5ODk5IDAuODE3MzgzIDMuNzY1NzkgMC44MTczODMgMy4xNjA2NEMwLjgxNzM4MyAyLjU1MTI3IDAuOTU0OTE1IDIuMDE4MDcgMS4yMjk5OCAxLjU2MTA0QzEuNTA1MDUgMS4wOTk3NyAxLjg3OTU2IDAuNzQyMTg4IDIuMzUzNTIgMC40ODgyODFDMi44Mjc0NyAwLjIzNDM3NSAzLjM2MDY4IDAuMTA3NDIyIDMuOTUzMTIgMC4xMDc0MjJIMTAuMDQwNUMxMC42MzMgMC4xMDc0MjIgMTEuMTY2MiAwLjIzNDM3NSAxMS42NDAxIDAuNDg4MjgxQzEyLjExNDEgMC43NDIxODggMTIuNDg4NiAxLjA5OTc3IDEyLjc2MzcgMS41NjEwNEMxMy4wMzg3IDIuMDE4MDcgMTMuMTc2MyAyLjU1MTI3IDEzLjE3NjMgMy4xNjA2NEMxMy4xNzYzIDMuNzY1NzkgMTMuMDM4NyA0LjI5ODk5IDEyLjc2MzcgNC43NjAyNUMxMi40ODg2IDUuMjE3MjkgMTIuMTE0MSA1LjU3Mjc1IDExLjY0MDEgNS44MjY2NkMxMS4xNjYyIDYuMDgwNTcgMTAuNjMzIDYuMjA3NTIgMTAuMDQwNSA2LjIwNzUySDMuOTUzMTJaTTMuOTUzMTIgNC45MzE2NEgxMC4wNDA1QzEwLjM3OTEgNC45MzE2NCAxMC42ODggNC44NTc1OCAxMC45NjczIDQuNzA5NDdDMTEuMjUwOCA0LjU1NzEzIDExLjQ3NzIgNC4zNDc2NiAxMS42NDY1IDQuMDgxMDVDMTEuODE1OCAzLjgxNDQ1IDExLjkwMDQgMy41MDc2NSAxMS45MDA0IDMuMTYwNjRDMTEuOTAwNCAyLjgwOTQxIDExLjgxNTggMi41MDI2IDExLjY0NjUgMi4yNDAyM0MxMS40NzcyIDEuOTczNjMgMTEuMjUwOCAxLjc2NjI4IDEwLjk2NzMgMS42MTgxNkMxMC42ODggMS40NjU4MiAxMC4zNzkxIDEuMzg5NjUgMTAuMDQwNSAxLjM4OTY1SDMuOTUzMTJDMy42MTQ1OCAxLjM4OTY1IDMuMzAzNTUgMS40NjU4MiAzLjAyMDAyIDEuNjE4MTZDMi43NDA3MiAxLjc2NjI4IDIuNTE2NDQgMS45NzM2MyAyLjM0NzE3IDIuMjQwMjNDMi4xNzc5IDIuNTAyNiAyLjA5MzI2IDIuODA5NDEgMi4wOTMyNiAzLjE2MDY0QzIuMDkzMjYgMy41MDc2NSAyLjE3NzkgMy44MTQ0NSAyLjM0NzE3IDQuMDgxMDVDMi41MTY0NCA0LjM0NzY2IDIuNzQwNzIgNC41NTcxMyAzLjAyMDAyIDQuNzA5NDdDMy4zMDM1NSA0Ljg1NzU4IDMuNjE0NTggNC45MzE2NCAzLjk1MzEyIDQuOTMxNjRaTTMuOTUzMTIgNC41MTkwNEMzLjY5OTIyIDQuNTE5MDQgMy40Njg1OSA0LjQ1NzY4IDMuMjYxMjMgNC4zMzQ5NkMzLjA1ODExIDQuMjEyMjQgMi44OTUxOCA0LjA0NzIgMi43NzI0NiAzLjgzOTg0QzIuNjUzOTcgMy42MzI0OSAyLjU5NDczIDMuNDAzOTcgMi41OTQ3MyAzLjE1NDNDMi41OTQ3MyAyLjkwNDYyIDIuNjUzOTcgMi42NzYxMSAyLjc3MjQ2IDIuNDY4NzVDMi44OTUxOCAyLjI2MTM5IDMuMDU4MTEgMi4wOTYzNSAzLjI2MTIzIDEuOTczNjNDMy40Njg1OSAxLjg1MDkxIDMuNjk5MjIgMS43ODk1NSAzLjk1MzEyIDEuNzg5NTVDNC4yMDcwMyAxLjc4OTU1IDQuNDM3NjYgMS44NTA5MSA0LjY0NTAyIDEuOTczNjNDNC44NTIzOCAyLjA5MjEyIDUuMDE3NDIgMi4yNTUwNSA1LjE0MDE0IDIuNDYyNEM1LjI2Mjg2IDIuNjY1NTMgNS4zMjIxIDIuODk0MDQgNS4zMTc4NyAzLjE0Nzk1QzUuMzE3ODcgMy40MDE4NiA1LjI1NjUxIDMuNjMyNDkgNS4xMzM3OSAzLjgzOTg0QzUuMDExMDcgNC4wNDcyIDQuODQ2MDMgNC4yMTQzNiA0LjYzODY3IDQuMzQxMzFDNC40MzU1NSA0LjQ2NDAzIDQuMjA3MDMgNC41MjMyNyAzLjk1MzEyIDQuNTE5MDRaIiBmaWxsPSJibGFjayIvPgo8cGF0aCBkPSJNMy42OTI4NyAxMi43MTM5QzMuMTU1NDQgMTIuNzEzOSAyLjY2ODc4IDEyLjU5NTQgMi4yMzI5MSAxMi4zNTg0QzEuODAxMjcgMTIuMTI1NyAxLjQ1NjM4IDExLjgwMTkgMS4xOTgyNCAxMS4zODcyQzAuOTQ0MzM2IDEwLjk3MjUgMC44MTczODMgMTAuNDkyMiAwLjgxNzM4MyA5Ljk0NjI5QzAuODE3MzgzIDkuNDAwMzkgMC45NDQzMzYgOC45MjAwOCAxLjE5ODI0IDguNTA1MzdDMS40NTYzOCA4LjA5MDY2IDEuODAxMjcgNy43NjY5MyAyLjIzMjkxIDcuNTM0MThDMi42Njg3OCA3LjI5NzIgMy4xNTU0NCA3LjE3ODcxIDMuNjkyODcgNy4xNzg3MUgxMC4zMDA4QzEwLjgzODIgNy4xNzg3MSAxMS4zMjI4IDcuMjk3MiAxMS43NTQ0IDcuNTM0MThDMTIuMTkwMyA3Ljc2NjkzIDEyLjUzNTIgOC4wOTA2NiAxMi43ODkxIDguNTA1MzdDMTMuMDQ3MiA4LjkyMDA4IDEzLjE3NjMgOS40MDAzOSAxMy4xNzYzIDkuOTQ2MjlDMTMuMTc2MyAxMC40OTIyIDEzLjA0NzIgMTAuOTcyNSAxMi43ODkxIDExLjM4NzJDMTIuNTM1MiAxMS44MDE5IDEyLjE5MDMgMTIuMTI1NyAxMS43NTQ0IDEyLjM1ODRDMTEuMzIyOCAxMi41OTU0IDEwLjgzODIgMTIuNzEzOSAxMC4zMDA4IDEyLjcxMzlIMy42OTI4N1pNMTAuNDY1OCAxMS40NjM0QzEwLjc0MDkgMTEuNDYzNCAxMC45OTI3IDExLjM5MzYgMTEuMjIxMiAxMS4yNTM5QzExLjQ0OTcgMTEuMTE4NSAxMS42MzE3IDEwLjkzNDQgMTEuNzY3MSAxMC43MDE3QzExLjkwNjcgMTAuNDY4OSAxMS45Nzg3IDEwLjIxMDggMTEuOTgyOSA5LjkyNzI1QzExLjk4MjkgOS42NTIxOCAxMS45MTUyIDkuNDAyNTEgMTEuNzc5OCA5LjE3ODIyQzExLjY0NDQgOC45NDk3MSAxMS40NjAzIDguNzY3NzQgMTEuMjI3NSA4LjYzMjMyQzEwLjk5OSA4LjQ5NjkxIDEwLjc0NTEgOC40MjkyIDEwLjQ2NTggOC40MjkyQzEwLjE4NjUgOC40MjkyIDkuOTMyNjIgOC40OTY5MSA5LjcwNDEgOC42MzIzMkM5LjQ3NTU5IDguNzY3NzQgOS4yOTM2MiA4Ljk0OTcxIDkuMTU4MiA5LjE3ODIyQzkuMDIyNzkgOS40MDY3NCA4Ljk1NTA4IDkuNjYwNjQgOC45NTUwOCA5LjkzOTk0QzguOTU1MDggMTAuMjE5MiA5LjAyMjc5IDEwLjQ3MzEgOS4xNTgyIDEwLjcwMTdDOS4yOTM2MiAxMC45MzAyIDkuNDc1NTkgMTEuMTEyMSA5LjcwNDEgMTEuMjQ3NkM5LjkzMjYyIDExLjM4NzIgMTAuMTg2NSAxMS40NTkxIDEwLjQ2NTggMTEuNDYzNFpNMy45NTMxMiA2LjIwNzUyQzMuMzYwNjggNi4yMDc1MiAyLjgyNzQ3IDYuMDgwNTcgMi4zNTM1MiA1LjgyNjY2QzEuODc5NTYgNS41NzI3NSAxLjUwNTA1IDUuMjE3MjkgMS4yMjk5OCA0Ljc2MDI1QzAuOTU0OTE1IDQuMjk4OTkgMC44MTczODMgMy43NjU3OSAwLjgxNzM4MyAzLjE2MDY0QzAuODE3MzgzIDIuNTUxMjcgMC45NTQ5MTUgMi4wMTgwNyAxLjIyOTk4IDEuNTYxMDRDMS41MDUwNSAxLjA5OTc3IDEuODc5NTYgMC43NDIxODggMi4zNTM1MiAwLjQ4ODI4MUMyLjgyNzQ3IDAuMjM0Mzc1IDMuMzYwNjggMC4xMDc0MjIgMy45NTMxMiAwLjEwNzQyMkgxMC4wNDA1QzEwLjYzMyAwLjEwNzQyMiAxMS4xNjYyIDAuMjM0Mzc1IDExLjY0MDEgMC40ODgyODFDMTIuMTE0MSAwLjc0MjE4OCAxMi40ODg2IDEuMDk5NzcgMTIuNzYzNyAxLjU2MTA0QzEzLjAzODcgMi4wMTgwNyAxMy4xNzYzIDIuNTUxMjcgMTMuMTc2MyAzLjE2MDY0QzEzLjE3NjMgMy43NjU3OSAxMy4wMzg3IDQuMjk4OTkgMTIuNzYzNyA0Ljc2MDI1QzEyLjQ4ODYgNS4yMTcyOSAxMi4xMTQxIDUuNTcyNzUgMTEuNjQwMSA1LjgyNjY2QzExLjE2NjIgNi4wODA1NyAxMC42MzMgNi4yMDc1MiAxMC4wNDA1IDYuMjA3NTJIMy45NTMxMlpNMy45NTMxMiA0LjkzMTY0SDEwLjA0MDVDMTAuMzc5MSA0LjkzMTY0IDEwLjY4OCA0Ljg1NzU4IDEwLjk2NzMgNC43MDk0N0MxMS4yNTA4IDQuNTU3MTMgMTEuNDc3MiA0LjM0NzY2IDExLjY0NjUgNC4wODEwNUMxMS44MTU4IDMuODE0NDUgMTEuOTAwNCAzLjUwNzY1IDExLjkwMDQgMy4xNjA2NEMxMS45MDA0IDIuODA5NDEgMTEuODE1OCAyLjUwMjYgMTEuNjQ2NSAyLjI0MDIzQzExLjQ3NzIgMS45NzM2MyAxMS4yNTA4IDEuNzY2MjggMTAuOTY3MyAxLjYxODE2QzEwLjY4OCAxLjQ2NTgyIDEwLjM3OTEgMS4zODk2NSAxMC4wNDA1IDEuMzg5NjVIMy45NTMxMkMzLjYxNDU4IDEuMzg5NjUgMy4zMDM1NSAxLjQ2NTgyIDMuMDIwMDIgMS42MTgxNkMyLjc0MDcyIDEuNzY2MjggMi41MTY0NCAxLjk3MzYzIDIuMzQ3MTcgMi4yNDAyM0MyLjE3NzkgMi41MDI2IDIuMDkzMjYgMi44MDk0MSAyLjA5MzI2IDMuMTYwNjRDMi4wOTMyNiAzLjUwNzY1IDIuMTc3OSAzLjgxNDQ1IDIuMzQ3MTcgNC4wODEwNUMyLjUxNjQ0IDQuMzQ3NjYgMi43NDA3MiA0LjU1NzEzIDMuMDIwMDIgNC43MDk0N0MzLjMwMzU1IDQuODU3NTggMy42MTQ1OCA0LjkzMTY0IDMuOTUzMTIgNC45MzE2NFpNMy45NTMxMiA0LjUxOTA0QzMuNjk5MjIgNC41MTkwNCAzLjQ2ODU5IDQuNDU3NjggMy4yNjEyMyA0LjMzNDk2QzMuMDU4MTEgNC4yMTIyNCAyLjg5NTE4IDQuMDQ3MiAyLjc3MjQ2IDMuODM5ODRDMi42NTM5NyAzLjYzMjQ5IDIuNTk0NzMgMy40MDM5NyAyLjU5NDczIDMuMTU0M0MyLjU5NDczIDIuOTA0NjIgMi42NTM5NyAyLjY3NjExIDIuNzcyNDYgMi40Njg3NUMyLjg5NTE4IDIuMjYxMzkgMy4wNTgxMSAyLjA5NjM1IDMuMjYxMjMgMS45NzM2M0MzLjQ2ODU5IDEuODUwOTEgMy42OTkyMiAxLjc4OTU1IDMuOTUzMTIgMS43ODk1NUM0LjIwNzAzIDEuNzg5NTUgNC40Mzc2NiAxLjg1MDkxIDQuNjQ1MDIgMS45NzM2M0M0Ljg1MjM4IDIuMDkyMTIgNS4wMTc0MiAyLjI1NTA1IDUuMTQwMTQgMi40NjI0QzUuMjYyODYgMi42NjU1MyA1LjMyMjEgMi44OTQwNCA1LjMxNzg3IDMuMTQ3OTVDNS4zMTc4NyAzLjQwMTg2IDUuMjU2NTEgMy42MzI0OSA1LjEzMzc5IDMuODM5ODRDNS4wMTEwNyA0LjA0NzIgNC44NDYwMyA0LjIxNDM2IDQuNjM4NjcgNC4zNDEzMUM0LjQzNTU1IDQuNDY0MDMgNC4yMDcwMyA0LjUyMzI3IDMuOTUzMTIgNC41MTkwNFoiIGZpbGw9ImJsYWNrIiBmaWxsLW9wYWNpdHk9IjAuMiIvPgo8L3N2Zz4='
 };
 
-window.addEventListener('click', function(e) {
+window.addEventListener("click", function(e) {
 	e = e || window.event;
-	var target = event && event.target,
-		tagName=target && target.tagName || '',
-		className=target && target.className || '';
 
-	if (tagName === 'A' || tagName === 'INPUT' || tagName === 'SELECT' || tagName === 'TEXTAREA' || tagName === 'BUTTON') return;
-	if (className.indexOf('sample-box') > -1) return;
+	var target = event  && event.target,
+		tagName  = target && target.tagName   || "",
+		className= target && target.className || "";
 
-	var modal = document.querySelectorAll("div.sample-box") || [];
-	modal.forEach(function(element) {
+	console.log("WINDOW.click:", e, this, target, tagName, className);
+
+	if (tagName === "A" || tagName === "INPUT" || tagName === "SELECT" || tagName === "TEXTAREA" || tagName === "BUTTON") return true;
+	if (className.indexOf("jsModal") > -1) return true;
+
+	var modal = document.querySelectorAll("div.jsModal") || [],
+		i = 0,
+		n = modal && +modal.length || 0;
+
+	for(i = 0; i < n; ++i)
+	{
+		var element = modal[i];
 		if (element && element.style) {
-			element.style.display="none";
+			element.style.display = "none";
 		}
-	});
-});
-
-function OutsideClick(parentElement, isOpen, handler)
-{
-	if (window === this) return;
-	var self = this;
-	alert(self);
-	self.parentElement = parentElement;
-	self.handler = handler;
-	self.isOpen  = isOpen;
-	self.handleOutsideClick = self.handleOutsideClick.bind(self);
-	document.addEventListener('click', function(e) {
-		self.handleOutsideClick.bind(self);
-	});
-}
-
-OutsideClick.prototype.handleOutsideClick = function(e) {
-	e = e || window.event;
-	var target = event && event.target;
-	var self   = this;
-	alert(self);
-	if (!self.parentElement.contains(target) && self.isOpen) {
-		self.handler();
-		console.log('Clicked outside');
 	}
-};
+}, true);
 
-OutsideClick.prototype.destroy = function() {
-	document.removeEventListener('click', this.handleOutsideClick);
-};
-
-function GenerateTheMainMenuDateAndTime(params) {
+function generateTheMainMenuDateAndTime(e) {
 	// Sun 7 Jul 4:27 AM
 	var date       = new Date();
 	var days       = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -70,47 +49,6 @@ function GenerateTheMainMenuDateAndTime(params) {
 	var menu = document.getElementById('main_menu_right_div_time_and_date');
 	if (menu) menu.textContent = formattedDateTime;
 }
-
-function Dropdown(parentElement, dropdownContent, isOpen, onStateChange)
-{
-	if (window === this) return;
-	var self=this;
-	alert(self);
-	self.parentElement   = parentElement;
-	self.dropdownContent = dropdownContent;
-	self.isOpen          = isOpen;
-	self.onStateChange   = onStateChange;
-
-	console.log(parentElement, dropdownContent, isOpen, onStateChange);
-
-	self.parentElement.addEventListener('click', function(e) {
-		self.toggleDropdown.bind(self);
-	});
-}
-
-Dropdown.prototype.toggleDropdown = function() {
-	var self=this;
-	self.isOpen = !self.isOpen;
-	console.log(self.isOpen);
-	self.onStateChange && self.onStateChange(self.isOpen);
-	if (self.isOpen) {
-		self.openDropdown();
-	} else {
-		self.closeDropdown();
-	}
-};
-
-Dropdown.prototype.openDropdown = function() {
-	var self=this;
-	self.parentElement.appendChild(self.dropdownContent);
-};
-
-Dropdown.prototype.closeDropdown = function() {
-	var self=this;
-	if (self.dropdownContent && self.dropdownContent.parentNode) {
-		self.dropdownContent.parentNode.removeChild(self.dropdownContent);
-	}
-};
 
 function menuBar() {
 	// main_menu
@@ -136,55 +74,19 @@ function menuBar() {
 	// menu contorl buttons
 
 	// focus button
-	//states
-	var state = {
-		isDropdownOpen: false
-	};
-
-	var handler = {
-		set(target, property, value) {
-			target[property] = value;
-			console.log(property, " is now ", value);
-			if (property === 'isDropdownOpen') {
-				if (value) {
-					dropdownContentMenu.style.display = 'block';
-				} else {
-					dropdownContentMenu.style.display = 'none';
-				}
-			}
-			return true;
-		}
-	};
-
-	var reactiveState = new Proxy(state, handler);
-
 	var focusButton = document.createElement('button');
-	focusButton.className = 'items-center button';
+	focusButton.className = 'items-center button jsToggleModal';
+	focusButton.setAttribute("data-modal-target", "focusMenu");
+
 	var focusIcon = document.createElement('img');
 	focusIcon.src = svgMappings['focus'];
 	focusButton.appendChild(focusIcon);
 	menuRightDiv.appendChild(focusButton);
 
 	var dropdownContentMenu = document.createElement('div');
-	dropdownContentMenu.className = 'sample-box';
-
-	var dropdown = new Dropdown(focusButton, dropdownContentMenu, reactiveState.isDropdownOpen, function(newState) {
-		reactiveState.isDropdownOpen = newState;
-		alert(newState);
-	});
-
-	console.log("isDropdownOpen initially:", reactiveState.isDropdownOpen);
-
-	var outsideClickDetector = new OutsideClick(dropdownContentMenu, reactiveState.isDropdownOpen, function() {
-		dropdown.closeDropdown();
-		reactiveState.isDropdownOpen = false;
-	});
-
-	document.addEventListener('click', function(e) {
-		outsideClickDetector.handleOutsideClick();
-		outsideClickDetector.destroy();
-	});
-
+	dropdownContentMenu.id = "focusMenu";
+	dropdownContentMenu.className = 'sample-box jsModal';
+	dropdownContentMenu.style.display = "none";
 
 	// Creating wifi button
 	var wifiButton = document.createElement('button');
@@ -209,8 +111,36 @@ function menuBar() {
 	menuRightDiv.appendChild(dateAndTime);
 	mainMenuBar.appendChild(menuRightDiv);
 
-	GenerateTheMainMenuDateAndTime();
-	window.setInterval(GenerateTheMainMenuDateAndTime, 60000);
+	var scope=mainMenuBar||document,
+		buttons = scope.querySelectorAll(".jsToggleModal") || [],
+		i = 0,
+		n = buttons && +buttons.length || 0;
+
+	scope.appendChild(dropdownContentMenu);
+
+	console.log(buttons);
+	for(i=0;i<n;++i)
+	{
+		(function(i){
+			var element = buttons[i];
+			if (element && element.style) {
+				console.log("ADD CLICK:", element, i);
+				element.addEventListener("click", function(e) {
+					var target_id = element.getAttribute("data-modal-target"),
+						target = document.getElementById(target_id),
+						style  = target && target.style || {},
+						hidden = (style.display || "").toLowerCase() === "none";
+
+					style.display = hidden ? "block" : "none";
+
+					console.log("CLICK BUTTON:", e, this, element, target_id, target, style, hidden, i);
+				}, true);
+			}
+		})(i);
+	}
+
+	generateTheMainMenuDateAndTime();
+	window.setInterval(generateTheMainMenuDateAndTime, 60000);
 }
 
 window.onload = function(e) {
