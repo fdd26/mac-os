@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/global.css" />
+</head>
+<body id="__root" class="reset">
+
+	<ul class="menu" type="none">
+	<li><a href="javascript:void(0);" class="apple-icon jsToggle" data-toggle-target="#apple-modal" style="display:block;float:left;width:20ex;margin:10px auto;background:green;clear:both;">APPLE&nbsp;</a>
+	<li><a href="javascript:void(0);" class="apple-icon jsToggle" data-toggle-target="#samsung-modal" style="display:block;float:left;width:20ex;margin:10px auto;background:green;clear:both;">Samsung&nbsp;</a></li>
+	</ul>
+
+	<div id="apple-modal" class="jsModal" style="display:none;float:left;clear:both;margin:20px auto;background:red;width:100px;height:100px;">Apple MODAL</div>
+
+
+	<div id="samsung-modal" class="jsModal" style="display:none;float:left;clear:both;margin:20px auto;background:red;width:100px;height:100px;">Samsung MODAL</div>
+
+<script type="text/javascript"
+	src="https://code.jquery.com/jquery-1.12.4.min.js"
+	integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+	crossorigin="anonymous"></script>
+
+<script type="text/javascript">//<!--
+if (window.$)
+{
+	$(function() {
+		$("a.jsToggle").click(function(e){
+			var $t=$(this),
+			css=$t.attr("data-toggle-target") || "",
+			$target = $(css);
+
+			$target.toggle();
+		});
+
+		$(window).click(function(e){
+			var target=e && e.target;
+			if ($(target).not("a,button,input,.jsModal")[0])
+			{
+				$(".jsModal").hide();
+			}
+		});
+	});
+}
+// --></script>
+
+</body>
+</html>
