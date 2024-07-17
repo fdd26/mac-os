@@ -8,14 +8,23 @@ var svgMappings = {
 window.addEventListener("click", function(e) {
 	e = e || window.event;
 
-	var target = event  && event.target,
-		tagName  = target && target.tagName   || "",
-		className= target && target.className || "";
+	var target = event  && event.target, j = 0;
 
-	console.log("WINDOW.click:", e, this, target, tagName, className);
+	while(target && (++j < 1000))
+	{
+		var tagName  = target && target.tagName   || "",
+			className= target && target.className || "",
+			parentNode = target;
 
-	if (tagName === "A" || tagName === "INPUT" || tagName === "SELECT" || tagName === "TEXTAREA" || tagName === "BUTTON") return true;
-	if (className.indexOf("jsModal") > -1) return true;
+		if (className.indexOf("jsCloseModal") > -1) break;
+		if (className.indexOf("jsModal") > -1) return true;
+		if (tagName === "A" || tagName === "INPUT" || tagName === "SELECT" || tagName === "TEXTAREA" || tagName === "BUTTON") return true;
+		if (tagName === "DOCUMENT" || tagName === "BODY" || tagName === "WINDOW") break;
+
+		console.log("WINDOW.click:", j, e, this, target, tagName, className);
+
+		target = target.parentNode;
+	}
 
 	var modal = document.querySelectorAll("div.jsModal") || [],
 		i = 0,
@@ -48,6 +57,34 @@ function generateTheMainMenuDateAndTime(e) {
 	var formattedDateTime = [dayOfWeek, ' ', dayOfMonth, month, ' ', hours, ':', minutesFormatted, ampm].join('');
 	var menu = document.getElementById('main_menu_right_div_time_and_date');
 	if (menu) menu.textContent = formattedDateTime;
+}
+
+function setToggleModalButtonsHandler(scope0)
+{
+	var scope = scope0||document,
+		buttons = scope.querySelectorAll(".jsToggleModal") || [],
+		i = 0,
+		n = buttons && +buttons.length || 0;
+
+	for(i=0;i<n;++i)
+	{
+		(function(i){
+			var element = buttons[i];
+			if (element && element.style) {
+				//console.log("ADD CLICK:", element, i);
+				element.addEventListener("click", function(e) {
+					var target_id = element.getAttribute("data-modal-target"),
+						target = document.getElementById(target_id),
+						style  = target && target.style || {},
+						hidden = (style.display || "").toLowerCase() === "none";
+
+					style.display = hidden ? "block" : "none";
+
+					//console.log("CLICK BUTTON:", e, this, element, target_id, target, style, hidden, i);
+				}, true);
+			}
+		})(i);
+	}
 }
 
 function menuBar() {
@@ -87,10 +124,11 @@ function menuBar() {
 	dropdownContentMenu.id = "focusMenu";
 	dropdownContentMenu.className = 'sample-box jsModal';
 	dropdownContentMenu.style.display = "none";
+	dropdownContentMenu.innerHTML = '<h1>DROP</h1><h2>DOWN</h2><input type="text" value="1234" />';
 
 	// Creating wifi button
 	var wifiButton = document.createElement('button');
-	wifiButton.className = 'items-center';
+	wifiButton.className = 'items-center jsCloseModal';
 	var wifiIcon = document.createElement('img');
 	wifiIcon.src = svgMappings['wifi'];
 	wifiButton.appendChild(wifiIcon);
@@ -111,33 +149,9 @@ function menuBar() {
 	menuRightDiv.appendChild(dateAndTime);
 	mainMenuBar.appendChild(menuRightDiv);
 
-	var scope=mainMenuBar||document,
-		buttons = scope.querySelectorAll(".jsToggleModal") || [],
-		i = 0,
-		n = buttons && +buttons.length || 0;
+	mainMenuBar.appendChild(dropdownContentMenu);
 
-	scope.appendChild(dropdownContentMenu);
-
-	console.log(buttons);
-	for(i=0;i<n;++i)
-	{
-		(function(i){
-			var element = buttons[i];
-			if (element && element.style) {
-				console.log("ADD CLICK:", element, i);
-				element.addEventListener("click", function(e) {
-					var target_id = element.getAttribute("data-modal-target"),
-						target = document.getElementById(target_id),
-						style  = target && target.style || {},
-						hidden = (style.display || "").toLowerCase() === "none";
-
-					style.display = hidden ? "block" : "none";
-
-					console.log("CLICK BUTTON:", e, this, element, target_id, target, style, hidden, i);
-				}, true);
-			}
-		})(i);
-	}
+	setToggleModalButtonsHandler(mainMenuBar);
 
 	generateTheMainMenuDateAndTime();
 	window.setInterval(generateTheMainMenuDateAndTime, 60000);
