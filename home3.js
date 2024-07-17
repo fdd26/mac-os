@@ -128,15 +128,24 @@ function menuBar() {
 
 	// Creating wifi button
 	var wifiButton = document.createElement('button');
-	wifiButton.className = 'items-center jsCloseModal';
+	wifiButton.className = 'items-center jsToggleModal'; // jsCloseModal
+	wifiButton.setAttribute("data-modal-target", "wifiMenu");
+
 	var wifiIcon = document.createElement('img');
 	wifiIcon.src = svgMappings['wifi'];
 	wifiButton.appendChild(wifiIcon);
 	menuRightDiv.appendChild(wifiButton);
 
+	var wifiContentMenu = document.createElement('div');
+	wifiContentMenu.id = "wifiMenu";
+	wifiContentMenu.className = 'sample-box jsModal';
+	wifiContentMenu.style.display = "none";
+	//wifiContentMenu.style.background = "blue !important";
+	wifiContentMenu.innerHTML = '<h1>WIFI</h1><h2>UP</h2><input type="text" value="56789" />';
+
 	// Creating control center button
 	var controlCenterButton = document.createElement('button');
-	controlCenterButton.className = 'items-center';
+	controlCenterButton.className = 'items-center jsCloseModal';
 	var controlCenterIcon = document.createElement('img');
 	controlCenterIcon.src = svgMappings['control-center'];
 	controlCenterButton.appendChild(controlCenterIcon);
@@ -150,6 +159,7 @@ function menuBar() {
 	mainMenuBar.appendChild(menuRightDiv);
 
 	mainMenuBar.appendChild(dropdownContentMenu);
+	mainMenuBar.appendChild(wifiContentMenu);
 
 	setToggleModalButtonsHandler(mainMenuBar);
 
